@@ -15,11 +15,11 @@ This repo is my first contact with golang tests.
 
 In the screenshot below we have two scenarios: a failed test and a successful test, as well as the syntax in the linux/MacOS CLI.
 
-<img src="/home/juanvieira/local/go-testes/img/image.png">
+![alt text](img/image.png)
 
 **Cached**
 
-<img src="/home/juanvieira/local/go-testes/img/image2.png">
+![alt text](img/image1.png)
 
 When you perform a test, the time is calculated and shown on the screen. When you run another identical test, without changing anything in the code of the previously run test, the return will be “cached”. When you run a Go test and see the message “(cached)”, it means that Go is reusing the results of a previous test run. In other words, the test wasn't actually run again, because Go assumed that the result would be the same.
 
@@ -60,3 +60,5 @@ go tool cover --func=result.txt
 # Bring a temporary HTML file explaining more
 go tool cover --html=result.txt
 ```
+
+![alt text](img/image2.png)
