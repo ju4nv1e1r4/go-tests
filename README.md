@@ -11,7 +11,7 @@ This repo is my first contact with golang tests.
 
 ### Observations
 
-**Output on terminal**
+**Output on Terminal**
 
 In the screenshot below we have two scenarios: a failed test and a successful test, as well as the syntax in the linux/MacOS CLI.
 
@@ -33,3 +33,30 @@ The test cache is invalidated when:
 - Dependencies are updated: If you update your project's dependencies, the cache will also be invalidated;
 - You run the command go clean -testcache: This command manually clears the test cache.
 
+**Command Line Tips**
+
+Run all tests on package:
+```bash
+go test ./...
+```
+
+Run test on verbose mode:
+```bash
+go test -v
+```
+
+Run the percentual of your package is covered:
+```bash
+go test --cover
+```
+
+Take off a complete report of your tests:
+```bash
+go test --coverprofile result.txt
+
+# Bring details about report
+go tool cover --func=result.txt
+
+# Bring a temporary HTML file explaining more
+go tool cover --html=result.txt
+```
